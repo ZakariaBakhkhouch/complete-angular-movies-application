@@ -13,6 +13,13 @@ import { SearchComponent } from './components/search/search.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ModalComponent } from './components/modal/modal.component';
 
+import { ProfitPipe } from './pipes/profit.pipe';
+import { FormsModule } from '@angular/forms';
+import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutesModule } from './Modules/app.routes';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +32,15 @@ import { ModalComponent } from './components/modal/modal.component';
     NotAuthorizedComponent,
     SearchComponent,
     LoaderComponent,
-    ModalComponent
+    ModalComponent,
+    ProfitPipe,
+    DetailsActorsComponent,
+    NotFoundComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutesModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
